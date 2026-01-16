@@ -16,7 +16,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: huangkaiw3n/bumper@v0.1.1
+      - uses: huangkaiw3n/bumper@v0.1.2
         with:
           anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
