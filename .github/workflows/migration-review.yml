@@ -1,0 +1,22 @@
+name: Migration Review
+
+on:
+  pull_request:
+    paths:
+      - "src/database/migrations/**"
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: huangkaiw3n/bumper@v0.1.1
+        with:
+          anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
