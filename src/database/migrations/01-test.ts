@@ -15,6 +15,8 @@ const enumMessageClusterStatusesStatus = [
   "'hidden'",
 ];
 
+// Add some comments
+
 module.exports = {
   ENUM_MESSAGE_CLUSTER_STATUSES_STATUS,
   up: async (queryInterface, Sequelize) => {
